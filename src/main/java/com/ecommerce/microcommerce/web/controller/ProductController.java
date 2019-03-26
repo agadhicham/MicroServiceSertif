@@ -134,6 +134,12 @@ public class ProductController {
     	
     	return  ListMargesProduits; 	
     }
+	
+    //method qui retourn la liste des produits par order croissant des noms
+@GetMapping(value="/prodtrier")
+public List<Product> trierProduitsParOrdreAlphabetique(){
+	   return productDao.findAllByOrderByNom();
+}
 
 
     
